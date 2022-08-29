@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toggle menu</title>
+    <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
+
+<style>
+.navbar {
+  background-color: rgb(59, 97, 83);
+  padding-top: 1rem;
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+  top: 0;
+}
+
+/*Rules for sizing the icon*/
+.material-icons.md-18 { font-size: 18px; }
+.material-icons.md-24 { font-size: 24px; }
+.material-icons.md-36 { font-size: 36px; }
+.material-icons.md-48 { font-size: 48px; }
+
+.navbar-toggle {
+  display: none;
+}
+
+.main-nav {
+  display: none;
+}
+
+.main-nav ul {
+  list-style-type: none;
+}
+
+.main-nav ul li {
+  padding: 1rem;
+}
+
+.main-nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.navbar-toggle:checked ~ .main-nav {
+  display: block;
+}
+
+.navbar-toggle:checked ~ .main-nav ul li{
+  border-bottom: 1px white solid;
+}
+
+.navbar-toggle:checked ~ .main-nav ul li:first-child {
+  border-top: 1px white solid;
+}
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <label class="label-navbar-toggle" for="navbar-toggle">
+          <span class="material-icons md-48">
+            menu
+            </span>
+        </label>
+        <input type="checkbox" id="navbar-toggle" class="navbar-toggle">
+        <div class="main-nav">
+          <ul>
+            <li>
+              <a href="#">Home</a>
+            </li>
+            <li>
+              <a href="#">About</a>
+            </li>
+            <li>
+              <a href="#">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+</body>
+</html>
